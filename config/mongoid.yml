@@ -1,0 +1,20 @@
+development:
+  sessions:
+    default:
+      database: idea_box_development
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    include_root_in_json: true
+    preload_models: true
+test:
+  sessions:
+    default:
+      database: idea_box_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1

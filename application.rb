@@ -1,4 +1,3 @@
-
 set :root, File.realpath(File.dirname(__FILE__))
 register Sinatra::AdvancedRoutes
 

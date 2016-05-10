@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-2">
-      <h1>Hey world.</h1>
+      <% @ideas.each do |idea| %>
+        <h6><%= idea.title %></h6>
+      <% end %>
     </div>
   </div>
 </div>

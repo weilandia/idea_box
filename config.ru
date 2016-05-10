@@ -1,9 +1,10 @@
-require './config/environment'
+require "./application"
 
+
+puts "ROOOT: #{Sinatra::Application.settings.root} #{ApplicationController.root}"
 unless ENV['RACK_ENV'] == 'production'
   map '/assets' do
-    run Assets.environment Sinatra::Application.settings.root
+    run Assets.environment ApplicationController.root
   end
 end
-
-run Sinatra::Application
+run App

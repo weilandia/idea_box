@@ -1,0 +1,89 @@
+@import "colors";
+*{
+  font-family:$font-stack;
+  font-weight: 400;
+}
+
+.idea {
+  width:90%;
+  height:auto;
+  margin: 8px;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $background-blue;
+  display:block;
+  float:left;
+  .delete {
+    margin-left: -4px;
+    margin-top: -4px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .title {
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .quality {
+    cursor: default;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .upvote {
+    margin: 0;
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: 800;
+  }
+  .upvote-div {
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+  .downvote {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .downvote-div {
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+  }
+}
+
+.idea-forms {
+  .idea-create {
+    margin: 5px;
+    .idea-title {
+      margin: 5px;
+    }
+    .idea-body {
+      margin: 5px;
+    }
+    .idea-save {
+      margin: 5px;
+      margin-top: 0;
+      outline: 0;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.float-right {
+  float: right;
+}

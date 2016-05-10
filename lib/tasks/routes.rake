@@ -1,3 +1,5 @@
+require './config/environment'
+
 desc 'Show routes'
 task :routes do
   Sinatra::Application.each_route { |route|

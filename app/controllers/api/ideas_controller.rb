@@ -2,6 +2,7 @@ module Api
   class IdeasController < ::ApplicationController
     post "/api/ideas" do
       @idea = Idea.create(idea_params)
+
       @idea.to_json
     end
 

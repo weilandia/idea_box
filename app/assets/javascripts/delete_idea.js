@@ -9,14 +9,3 @@ $(document).ready(function(){
     })
   });
 });
-
-
-// $("#ajax-create-idea").on('submit', function() {
-//   event.preventDefault();
-//   var formData = $(this).serializeArray();
-//   $(".ideas").prepend(ideaDiv(formData));
-//   $.post('api/ideas', formData, function(response) {
-//     console.log(response);
-//   });
-//   $("#ajax-create-idea").trigger('reset');
-// });

@@ -1,6 +1,12 @@
 module RSpecMixin
   include Rack::Test::Methods
-  def app() Sinatra::Application end
+  def app() App end
 end
 
-RSpec.configure { |c| c.include RSpecMixin }
+Capybara.app = App
+Capybara.default_driver = :selenium
+
+RSpec.configure { |c|
+  c.include RSpecMixin
+  c.include Capybara::DSL
+}

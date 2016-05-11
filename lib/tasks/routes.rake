@@ -2,7 +2,7 @@ require './application'
 
 desc 'Show routes'
 task :routes do
-  App.middleware.map(&:first).each do |mw|
+  Controllers.middleware.map(&:first).each do |mw|
     mw.each_route { |route|
     unless route.verb == "HEAD"
       puts "#{route.verb} #{route.path}  =>  #{mw.name}"

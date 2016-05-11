@@ -25,6 +25,10 @@ end
 group :test do
   gem 'rack-test'
   gem 'rspec'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'fabrication'
+  gem 'launchy'
 end
 
 ruby '2.2.4'

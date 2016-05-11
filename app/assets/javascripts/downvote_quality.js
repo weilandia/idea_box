@@ -1,16 +1,16 @@
 $(document).ready(function() {
-  $(document).on('click', '.upvote', function() {
+  $(document).on('click', '.downvote', function() {
     var $ideaToUpdate = $(this).closest("div.idea")
 
-    var findUpvoteQuality = function(idea) {
+    var findDownvoteQuality = function(idea) {
       var currentQuality = ideaQualities.indexOf(idea);
-      if (currentQuality < 2) {
-        return ideaQualities[currentQuality + 1]
+      if (currentQuality > 0) {
+        return ideaQualities[currentQuality - 1]
       }
     };
 
-    var upvoteQuality = function(idea) {
-      var newQuality = findUpvoteQuality(idea.attr("data-quality"));
+    var downvoteQuality = function(idea) {
+      var newQuality = findDownvoteQuality(idea.attr("data-quality"));
       if (newQuality != ideaQualities[-1]) {
         idea.find(".quality").text("(" + newQuality + ")");
         idea.attr("data-quality", newQuality);

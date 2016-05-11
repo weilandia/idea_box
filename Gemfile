@@ -28,6 +28,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'fabrication'
+  gem 'launchy'
 end
 
 ruby '2.2.4'

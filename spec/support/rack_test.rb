@@ -4,7 +4,7 @@ module RSpecMixin
 end
 
 Capybara.app = App
-Capybara.javascript_driver = :selenium
+Capybara.default_driver = :selenium
 
 RSpec.configure { |c|
   c.include RSpecMixin

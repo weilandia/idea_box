@@ -21,3 +21,10 @@ describe "DELETE /api/ideas" do
     expect(last_response).to be_ok
   end
 end
+
+describe "GET /assets/application.css" do
+  it "response is a success" do
+    get('/assets/application.css')
+    expect(last_response).to be_ok
+  end
+end

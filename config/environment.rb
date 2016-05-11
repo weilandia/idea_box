@@ -10,5 +10,5 @@ configure do
 end
 
 require './app/controllers/application_controller'
-Dir.glob('./app/**/*.rb').each { |file| puts file; require file }
+Dir.glob('./app/**/*.rb').each { |file| require file }
 require "./application"

@@ -1,8 +1,6 @@
+require './config/environment'
 
-set :root, File.realpath(File.dirname(__FILE__))
-register Sinatra::AdvancedRoutes
-
-get '/' do
-  @ideas = Idea.all
-  erb :home
+class App < Sinatra::Application
+  use IdeasController
+  use Api::IdeasController
 end

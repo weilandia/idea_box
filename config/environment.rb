@@ -9,4 +9,6 @@ configure do
   Mongoid.load!("./config/mongoid.yml", :development)
 end
 
-Dir.glob('./**/*.rb').each { |file| require file }
+require './app/controllers/application_controller'
+Dir.glob('./app/**/*.rb').each { |file| puts file; require file }
+require "./application"

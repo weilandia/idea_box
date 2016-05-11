@@ -1,11 +1,9 @@
 production:
   sessions:
-    options:
+    default:
       database: idea_box_production
       hosts:
         - <%= ENV['MONGODB_URI'] %>
-      skip_version_check: true
-      safe: true
 
 development:
   sessions:

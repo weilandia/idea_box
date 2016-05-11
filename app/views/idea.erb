@@ -1,6 +1,6 @@
 <div class="ideas">
 <% @ideas.each do |idea| %>
-  <div id="<%= idea.id %>" class="idea">
+  <div id="<%= idea.id %>" class="idea" data-quality="<%= idea.quality %>">
     <div class="row idea-header">
       <div class="col-xs-12">
         <span class="delete-idea pointer">x</span>

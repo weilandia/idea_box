@@ -4,7 +4,7 @@ $(document).ready(function() {
     var $formData = $(this).serializeArray();
     $(".ideas").prepend(ideaDiv($formData));
     $.post('api/ideas', $formData, function(response) {
-      $(".ideas").children().first().attr("data-idea", JSON.parse(response)._id.$oid);
+      $(".ideas").children().first().attr("id", JSON.parse(response)._id.$oid);
     });
 
     $("#ajax-create-idea").trigger('reset');

@@ -5,7 +5,7 @@ $(document).ready(function(){
     $.ajax({
       type: "DELETE",
       url: "/api/ideas",
-      data: { id: $ideaToDelete.data("idea") },
+      data: { id: $ideaToDelete.attr("id") },
     })
   });
 });

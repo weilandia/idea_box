@@ -1,7 +1,6 @@
 production:
   sessions:
     default:
-      database: idea_box_production
       uri: <%= ENV['MONGODB_URI'] %>
 
 development:

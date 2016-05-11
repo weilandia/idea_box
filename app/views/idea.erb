@@ -1,8 +1,9 @@
+<div class="ideas">
 <% @ideas.each do |idea| %>
-  <div class="idea">
+  <div class="idea" data-idea="<%= idea.id %>">
     <div class="row idea-header">
       <div class="col-xs-12">
-        <span class="delete">x</span>
+        <span class="delete-idea pointer">x</span>
         <div class="float-right row">
           <div class="col-xs-12 upvote-div">
             <div class="upvote pointer">+</div>
@@ -23,3 +24,4 @@
     </div>
   </div>
 <% end %>
+</div>

@@ -17,10 +17,11 @@
   border-color: $background-blue;
   display:block;
   float:left;
-  .delete {
+  .delete-idea {
     margin-left: -4px;
     margin-top: -4px;
     margin-right: 10px;
+    padding: 0 5px 5px 5px;
     font-size: 15px;
   }
   .title {
@@ -65,9 +66,13 @@
       margin: 5px;
     }
     .idea-save {
+      background-color: $button;
+      border: none;
       margin: 5px;
       margin-top: 0;
-      outline: 0;
+      &:focus {
+        outline: 0;
+      }
     }
   }
 }

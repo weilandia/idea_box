@@ -6,7 +6,7 @@ Bundler.require(:default)
 Bundler.require(Sinatra::Base.environment)
 
 configure do
-  Mongoid.load!("./config/mongoid.yml", :development)
+  Mongoid.load!("./config/mongoid.yml", ENV['RACK_ENV'].to_sym)
 end
 
 require './app/controllers/application_controller'

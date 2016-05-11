@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem 'rake'
 
-gem 'mongoid'
+gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
 
 gem 'sinatra'

@@ -1,5 +1,5 @@
 production:
-  sessions:
+  clients:
     default:
       uri: <%= ENV['MONGODB_URI'] %>
       options:
@@ -7,14 +7,14 @@ production:
         safe: true
 
 development:
-  sessions:
+  clients:
     default:
       database: idea_box_development
       hosts:
         - localhost:27017
 
 test:
-  sessions:
+  clients:
     default:
       database: idea_box_test
       hosts:

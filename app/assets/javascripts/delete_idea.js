@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".delete-idea").on('click', function() {
+  $(document).on('click', '.delete-idea', function() {
     var $ideaToDelete = $(this).closest("div.idea")
     $ideaToDelete.remove()
     $.ajax({

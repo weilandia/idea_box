@@ -4,7 +4,6 @@ $(document).ready(function() {
     var $formData = $(this).serializeArray();
     $(".ideas").prepend(ideaDiv($formData));
     $.post('api/ideas', $formData, function(response) {
-      debugger;
       $(".ideas").children().first().attr("data-idea", JSON.parse(response)._id.$oid);
     });
 

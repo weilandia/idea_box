@@ -1,7 +1,7 @@
 production:
   sessions:
     default:
-      uri:
+      hosts:
         - <%= ENV['MONGODB_URI'] %>
 
 development:

@@ -1,9 +1,8 @@
 production:
   sessions:
     default:
-      database: idea_box_development
-      hosts:
-        - localhost:27017
+      database: idea_box_production
+      uri: ENV['MONGODB_URI']
 
 development:
   sessions:

@@ -3,5 +3,5 @@ class Idea
   include Mongoid::Timestamps
   field :title, type: String
   field :body, type: String
-  field :quality, type: String, default: "swill"
+  field :quality, type: String, default: "maybe"
 end

@@ -26,3 +26,5 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
 end
+
+ruby '2.2.4'

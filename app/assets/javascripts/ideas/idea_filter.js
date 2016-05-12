@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $(".active-filter").toggle()
+  
   var ideaFilter = function(filter) {
     $(".idea").each(function() {
       $(this).show()
@@ -9,8 +11,6 @@ $(document).ready(function() {
       }
     })
   }
-
-  $(".active-filter").toggle()
 
   $(document).on('click','.filter-button',function() {
     $(".active-filter").toggle().removeClass("active-filter");

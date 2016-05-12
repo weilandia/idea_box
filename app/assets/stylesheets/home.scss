@@ -2,6 +2,26 @@
 *{
   font-family:$font-stack;
   font-weight: 400;
+  color: $theme;
+}
+
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 100%;
+}
+
+.appname {
+  font-weight: 300;
+  font-size: 40px;
+  padding-left: 3px;
+  color: $appname;
+}
+
+.ideas {
+  margin-top: 20px;
 }
 
 .idea {
@@ -14,7 +34,7 @@
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
-  border-color: $background-blue;
+  border-color: $theme;
   display:block;
   float:left;
   .delete-idea {
@@ -28,6 +48,11 @@
     padding-top: 10px;
     font-size: 15px;
     font-weight: 600;
+  }
+  .edit-title {
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
   }
   .quality {
     cursor: default;

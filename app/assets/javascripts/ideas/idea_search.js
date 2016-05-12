@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   var searchIdea = function(query, entries) {
     return entries.map(function(entry){
-      if (entry.indexOf(query) === -1) {
+      if (entry.indexOf(query.toLowerCase()) === -1) {
         return false;
       } else {
         return true;

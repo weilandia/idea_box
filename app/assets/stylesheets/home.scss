@@ -84,7 +84,7 @@ textarea {
     .idea-body {
       margin: 5px;
     }
-    .idea-save {
+    .idea-button {
       background-color: $button;
       border: none;
       margin: 5px;
@@ -92,6 +92,9 @@ textarea {
       &:focus {
         outline: 0;
       }
+    }
+    .filter-button {
+      width:70px;
     }
   }
 }

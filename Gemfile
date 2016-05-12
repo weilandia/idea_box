@@ -6,7 +6,6 @@ gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
 
 gem 'sinatra'
-gem 'sinatra-formhelpers'
 gem 'sinatra-advanced-routes'
 
 gem 'sprockets'
@@ -28,7 +27,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'fabrication'
-  gem 'launchy'
 end
 
 ruby '2.2.4'

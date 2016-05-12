@@ -15,9 +15,9 @@ gem 'sass'
 
 gem 'pry'
 gem 'tux'
+gem 'faker'
 
 group :development do
-  gem 'faker'
   gem 'shotgun'
 end
 

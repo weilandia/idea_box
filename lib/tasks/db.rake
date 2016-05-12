@@ -1,5 +1,4 @@
 require './config/environment'
-require 'faker'
 
 namespace :db do
   desc 'Purge database'

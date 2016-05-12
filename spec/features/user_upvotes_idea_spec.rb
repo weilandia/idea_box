@@ -5,25 +5,27 @@ describe 'User upvotes ideas' do
     Fabricate(:idea)
     visit '/'
 
-    expect(page).to have_content("maybe")
-    expect(Idea.first.quality).to eq("maybe")
+    within(".ideas") do
+      expect(page).to have_content("maybe")
+      expect(Idea.first.quality).to eq("maybe")
 
-    find(".upvote").click
+      find(".upvote").click
 
-    expect(page).to_not have_content("maybe")
-    expect(page).to have_content("yes")
-    expect(Idea.first.quality).to eq("yes")
+      expect(page).to_not have_content("maybe")
+      expect(page).to have_content("yes")
+      expect(Idea.first.quality).to eq("yes")
 
-    find(".upvote").click
+      find(".upvote").click
 
-    expect(page).to_not have_content("yes")
-    expect(page).to have_content("now")
-    expect(Idea.first.quality).to eq("now")
+      expect(page).to_not have_content("yes")
+      expect(page).to have_content("now")
+      expect(Idea.first.quality).to eq("now")
 
-    find(".upvote").click
+      find(".upvote").click
 
-    expect(page).to_not have_content("yes")
-    expect(page).to have_content("now")
-    expect(Idea.first.quality).to eq("now")
+      expect(page).to_not have_content("yes")
+      expect(page).to have_content("now")
+      expect(Idea.first.quality).to eq("now")
+    end
   end
 end

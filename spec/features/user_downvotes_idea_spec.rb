@@ -7,25 +7,33 @@ describe 'User downvotes ideas' do
 
     visit '/'
 
-    expect(page).to have_content("now")
-    expect(Idea.first.quality).to eq("now")
+    within(".ideas") do
+      expect(page).to have_content("now")
+      expect(Idea.first.quality).to eq("now")
+    end
 
     find(".downvote").click
 
-    expect(page).to_not have_content("now")
-    expect(page).to have_content("yes")
-    expect(Idea.first.quality).to eq("yes")
+    within(".ideas") do
+      expect(page).to_not have_content("now")
+      expect(page).to have_content("yes")
+      expect(Idea.first.quality).to eq("yes")
+    end
 
     find(".downvote").click
 
-    expect(page).to_not have_content("yes")
-    expect(page).to have_content("maybe")
-    expect(Idea.first.quality).to eq("maybe")
+    within(".ideas") do
+      expect(page).to_not have_content("yes")
+      expect(page).to have_content("maybe")
+      expect(Idea.first.quality).to eq("maybe")
+    end
 
     find(".downvote").click
 
-    expect(page).to_not have_content("yes")
-    expect(page).to have_content("maybe")
-    expect(Idea.first.quality).to eq("maybe")
+    within(".ideas") do
+      expect(page).to_not have_content("yes")
+      expect(page).to have_content("maybe")
+      expect(Idea.first.quality).to eq("maybe")
+    end
   end
 end

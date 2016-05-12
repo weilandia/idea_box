@@ -4,9 +4,14 @@
     <form id="ajax-create-idea">
       <input type="text" name="title" id="title" placeholder="idea title" class="form-control idea-title" required maxlength="35">
       <textarea name="body" id="body" placeholder="idea body" class="form-control idea-body" required maxlength="100"></textarea>
-      <input type="submit" name="commit" value="save" id:"idea-save" class="btn btn-primary idea-save">
+      <input type="submit" name="commit" value="save" id:"idea-save" class="btn btn-primary idea-button">
     </form>
     <br>
     <input type="text" name="idea-search" id="idea-search" placeholder="search ideas" class="form-control idea-title">
+    <br>
+    <button type="button" name="commit" value="all" id:"filter-all" class="btn btn-primary idea-button filter-button active-filter">all</button>
+    <button type="button" name="commit" value="maybe" id:"filter-maybe" class="btn btn-primary idea-button filter-button">maybe</button>
+    <button type="button" name="commit" value="yes" id:"filter-yes" class="btn btn-primary idea-button filter-button">yes</button>
+    <button type="button" name="commit" value="now" id:"filter-now" class="btn btn-primary idea-button filter-button">now</button>
   </div>
 </div>

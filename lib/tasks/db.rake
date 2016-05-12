@@ -9,7 +9,7 @@ namespace :db do
   desc 'Load test data'
   task :seed do
     25.times do
-      Idea.create(title: Faker::Hipster.word, body: Faker::Hipster.sentence)
+      Idea.create(title: Faker::Hipster.word, body: Faker::Hipster.sentence, quality: ["maybe", "yes", "now"].sample)
       puts "Idea created."
     end
   end

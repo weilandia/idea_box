@@ -9,11 +9,32 @@ $(document).ready(function() {
       }
     };
 
+    //why is this not scoping properly?
+    var ideaFilter = function(filter) {
+      $(".idea").each(function() {
+        $(this).show()
+        if (filter === "all") return;
+        var quality = $(this).attr('data-quality')
+        if (quality != filter) {
+          $(this).toggle()
+        }
+      })
+    }
+
+    var checkFilter = function(filter) {
+      if ($(".active-filter").val() != "all") {
+        ideaFilter(filter);
+      }
+    }
+
     var upvoteQuality = function(idea) {
-      var newQuality = findUpvoteQuality(idea.attr("data-quality"));
+      var oldQuality = idea.attr("data-quality")
+      var newQuality = findUpvoteQuality(oldQuality);
       if (newQuality != ideaQualities[-1]) {
         idea.find(".quality").text("(" + newQuality + ")");
+
         idea.attr("data-quality", newQuality);
+        checkFilter(oldQuality);
 
         $.ajax({
           type: "PUT",

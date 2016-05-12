@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".active-filter").toggle()
-  
+
   var ideaFilter = function(filter) {
     $(".idea").each(function() {
       $(this).show()
@@ -10,6 +10,12 @@ $(document).ready(function() {
         $(this).toggle()
       }
     })
+  }
+
+  var checkFilter = function(filter) {
+    if ($(".active-filter").val() != "all") {
+      ideaFilter(filter);
+    }
   }
 
   $(document).on('click','.filter-button',function() {

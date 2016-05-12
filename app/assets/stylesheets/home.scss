@@ -58,6 +58,9 @@ textarea {
   .body {
     word-wrap: break-word;
   }
+  .edit-body {
+    resize:vertical;
+  }
   .quality {
     cursor: default;
     font-size: 12px;
@@ -83,6 +86,7 @@ textarea {
     }
     .idea-body {
       margin: 5px;
+      resize:vertical;
     }
     .idea-button {
       background-color: $button;

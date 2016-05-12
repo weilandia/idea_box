@@ -48,11 +48,15 @@ textarea {
     padding-top: 10px;
     font-size: 15px;
     font-weight: 600;
+    word-wrap: break-word;
   }
   .edit-title {
     font-size: 15px;
     font-weight: 600;
     border: none;
+  }
+  .body {
+    word-wrap: break-word;
   }
   .quality {
     cursor: default;

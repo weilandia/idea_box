@@ -10,12 +10,12 @@ module Api
     end
 
     put "/api/ideas" do
-      Idea.find(params[:id]).update(quality: params[:quality])
+      Idea.find(params[:id]).update(idea_params)
     end
 
     private
     def idea_params
-      {title: params[:title].strip, body: params[:body].strip}
+      {title: params[:title], body: params[:body], quality: params[:quality]}.select { |k, v| v }
     end
   end
 end

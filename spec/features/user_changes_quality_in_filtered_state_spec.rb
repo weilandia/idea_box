@@ -1,4 +1,4 @@
-require_relative '../spec_helper.rb'
+d ru  require_relative '../spec_helper.rb'
 
 describe 'User changes quality in fitered state' do
   it 'removes idea from maybe filter when upvoted' do

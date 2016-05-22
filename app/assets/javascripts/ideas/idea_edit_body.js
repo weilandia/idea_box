@@ -11,7 +11,6 @@ $(document).ready(function() {
   }
 
   $(document).on('click', '.body', function() {
-    debugger;
     $(this).replaceWith("<textarea id='edit-body' class='edit edit-body'>" + $(this).text() + "</textarea>")
     $(this).focus()
   });

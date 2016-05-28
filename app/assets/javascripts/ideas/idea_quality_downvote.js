@@ -1,34 +1,34 @@
 $(document).ready(function() {
   $(document).on('click', '.downvote', function() {
-    var $ideaToUpdate = $(this).closest("div.idea")
+    var $ideaToUpdate = $(this).closest("div.idea");
 
     var findDownvoteQuality = function(idea) {
       var currentQuality = ideaQualities.indexOf(idea);
       if (currentQuality > 0) {
-        return ideaQualities[currentQuality - 1]
+        return ideaQualities[currentQuality - 1];
       }
     };
 
     //why is this not scoping properly?
     var ideaFilter = function(filter) {
       $(".idea").each(function() {
-        $(this).show()
+        $(this).show();
         if (filter === "all") return;
-        var quality = $(this).attr('data-quality')
+        var quality = $(this).attr('data-quality');
         if (quality != filter) {
-          $(this).toggle()
+          $(this).toggle();
         }
-      })
-    }
+      });
+    };
 
     var checkFilter = function(filter) {
       if ($(".active-filter").val() != "all") {
         ideaFilter(filter);
       }
-    }
+    };
 
     var downvoteQuality = function(idea) {
-      var oldQuality = idea.attr("data-quality")
+      var oldQuality = idea.attr("data-quality");
       var newQuality = findDownvoteQuality(oldQuality);
       if (newQuality != ideaQualities[-1]) {
         idea.find(".quality").text("(" + newQuality + ")");

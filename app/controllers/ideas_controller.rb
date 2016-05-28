@@ -1,6 +1,14 @@
 class IdeasController < ApplicationController
   get "/" do
-    @ideas = Idea.order_by(:created_at => 'desc')
     erb :home
+  end
+
+  get "/sinatra" do
+    @ideas = Idea.order_by(:created_at => 'desc')
+    erb :home_sinatra
+  end
+
+  get "/react" do
+    erb :home_react
   end
 end

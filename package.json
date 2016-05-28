@@ -1,0 +1,51 @@
+{
+  "name": "idea_box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run clean && npm run build:webpack",
+    "start": "node devServer.js",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel/register",
+    "lint": "jshint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weilandia/idea_box.git"
+  },
+  "author": "Nick Weiland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weilandia/idea_box/issues"
+  },
+  "homepage": "https://github.com/weilandia/idea_box#readme",
+  "devDependencies": {
+    "babel": "^5.8.3",
+    "babel-core": "^5.7.4",
+    "babel-eslint": "^3.1.9",
+    "babel-loader": "^5.3.2",
+    "babel-plugin-react-transform": "^1.1.1",
+    "chai": "^3.2.0",
+    "css-loader": "^0.23.0",
+    "express": "^4.13.3",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.2.5",
+    "mocha-loader": "^0.7.1",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.0",
+    "redbox-react": "^1.0.1",
+    "rimraf": "^2.4.3",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.0.0"
+  },
+  "dependencies": {
+    "firebase": "^3.0.3",
+    "file-loader": "^0.8.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  }
+}

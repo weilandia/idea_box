@@ -1,22 +1,22 @@
 $(document).ready(function() {
-  $(".active-filter").toggle()
+  $(".active-filter").toggle();
 
   var ideaFilter = function(filter) {
     $(".idea").each(function() {
-      $(this).show()
+      $(this).show();
       if (filter === "all") return;
-      var quality = $(this).attr('data-quality')
+      var quality = $(this).attr('data-quality');
       if (quality != filter) {
-        $(this).toggle()
+        $(this).toggle();
       }
-    })
-  }
+    });
+  };
 
   var checkFilter = function(filter) {
     if ($(".active-filter").val() != "all") {
       ideaFilter(filter);
     }
-  }
+  };
 
   $(document).on('click','.filter-button',function() {
     $(".active-filter").toggle().removeClass("active-filter");

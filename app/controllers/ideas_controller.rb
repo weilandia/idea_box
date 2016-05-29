@@ -9,6 +9,6 @@ class IdeasController < ApplicationController
   end
 
   get "/react" do
-    erb :home_react
+    send_file "./react/index.html"
   end
 end

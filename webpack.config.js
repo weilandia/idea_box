@@ -9,7 +9,7 @@ module.exports = {
     ],
   },
   output: {
-    path: path.join(__dirname, './app/assets'),
+    path: path.join(__dirname, './app/assets/javascripts'),
     filename: 'react_app.js',
   },
   plugins: [

@@ -1,45 +1,18 @@
-const path = require('path');
-const webpack = require('webpack');
+var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-  entry: {
-    main: [
-      'webpack-hot-middleware/client', './react/index'
-    ],
-  },
+  entry: ['./react_app/index.js'],
   output: {
-    path: path.join(__dirname, './app/assets/javascripts'),
-    filename: 'react_app.js',
+    path: './app/assets/javascripts',
+    filename: 'react-app.js'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
   module: {
-    loaders: [{
-      test: /\.css$/,
-      loader: "style-loader!css-loader"
-    },{
-      test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-      loader: 'file-loader?name=[name].[ext]'
-      },{
-      test: /\.js$/,
-      loaders: ['babel'],
-      "plugins": ["react-transform"],
-      "extra": {
-        "react-transform": {
-          "transforms": [{
-            "transform": "react-transform-hmr",
-            "imports": ["react"],
-            "locals": ["module"]
-          }, {
-            "transform": "react-transform-catch-errors",
-            "imports": ["react", "redbox-react"]
-          }]
-        }
-      },
-      include: path.join(__dirname, 'react')
-    }]
-  }
+    loaders: [
+      { test: /\.html$/, loader: "file?name=[name].[ext]"} ,
+      { test: /\.css$/, loader: 'style!css' },
+      { test: /\.js$/, loader: "babel-loader?stage=0", exclude: '/node_modules/' },
+      { test: /\.jsx$/, loaders: ['jsx-loader', "babel-loader?stage=0"] }
+    ]
+  },
+  plugins: []
 };

@@ -9,7 +9,6 @@ gem 'sinatra'
 gem 'sinatra-advanced-routes'
 
 gem 'sprockets'
-gem 'bootstrap-sass', '~> 3.3.6'
 gem 'uglifier'
 gem 'sass'
 

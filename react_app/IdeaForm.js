@@ -6,8 +6,8 @@ export function IdeaForm() {
       <div className="idea-create">
         <h1 className="appname">ideabox</h1>
         <form id="ajax-create-idea">
-          <input type="text" name="title" id="title" placeholder="idea title" className="form-control idea-title" required maxlength="35"></input>
-          <textarea name="body" id="body" placeholder="idea body" className="form-control idea-body" required maxlength="100"></textarea>
+          <input type="text" name="title" id="title" placeholder="idea title" className="form-control idea-title" required maxLength="35"></input>
+          <textarea name="body" id="body" placeholder="idea body" className="form-control idea-body" required maxLength="100"></textarea>
           <input type="submit" name="commit" value="save" className="btn btn-primary idea-button"></input>
         </form>
         <br></br>

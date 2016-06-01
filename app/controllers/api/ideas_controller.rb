@@ -1,3 +1,5 @@
+require 'sinatra/json'
+
 module Api
   class IdeasController < ::ApplicationController
     post "/api/ideas" do
@@ -11,6 +13,10 @@ module Api
 
     put "/api/ideas" do
       Idea.find(params[:id]).update(idea_params)
+    end
+
+    get "/api/ideas" do
+      json Idea.order_by(:created_at => 'desc')
     end
 
     private

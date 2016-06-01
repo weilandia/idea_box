@@ -6,6 +6,7 @@ gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
 
 gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'sinatra-advanced-routes'
 
 gem 'sprockets'

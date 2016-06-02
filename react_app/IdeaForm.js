@@ -1,4 +1,4 @@
-import React, { Compnent } from 'react';
+import React, { Component } from 'react';
 
 export function IdeaForm() {
   return (

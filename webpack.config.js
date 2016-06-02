@@ -1,10 +1,12 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: ['./react_app/index.js'],
+  entry: {
+    react_app: './react_app/index.js',
+  },
   output: {
     path: './app/assets/javascripts',
-    filename: 'react-app.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [

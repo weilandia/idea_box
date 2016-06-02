@@ -5,14 +5,15 @@ import { Ideas } from './Ideas';
 export class IdeaBox extends Component {
   constructor() {
     super();
+    this.getIdeas();
+    this.state = {
+      ideas: []
+    };
   }
 
-  componentDidMount() {
-    this.serverRequest = $.get('/api/ideas', function(result) {
-      let ideas = result;
-      this.setState({
-        ideas: ideas
-      });
+  getIdeas() {
+    this.serverRequest = $.get('/api/ideas', function(ideas) {
+      this.setState({ideas: ideas});
     }.bind(this));
   }
 
